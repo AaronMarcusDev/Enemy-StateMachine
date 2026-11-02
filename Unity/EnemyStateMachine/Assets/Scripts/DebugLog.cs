@@ -7,7 +7,8 @@ class DebugLogs
         FoundPlayer,
         NoPlayer,
         CheckVision,
-        FOVCheck
+        FOVCheck,
+        MissingVisionSensor
     }
     public static void msg(DebugOption dbo, string optionalValue = "")
     {
@@ -36,6 +37,11 @@ class DebugLogs
             case DebugOption.FOVCheck:
                 {
                     Debug.Log($"<VisionSensor> angle is outside of FOV.");
+                    break;
+                }
+            case DebugOption.MissingVisionSensor:
+                {
+                    Debug.LogError($"<DetectionMeter> No VisionSensor found :(");
                     break;
                 }
 

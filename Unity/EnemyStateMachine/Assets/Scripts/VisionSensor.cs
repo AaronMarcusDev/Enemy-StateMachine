@@ -26,6 +26,8 @@ public class VisionSensor : MonoBehaviour
 
     // Output variables (public)
     public bool CanSeePlayer { get; private set; } // auto properties for shorthand notation
+    //                                      ^-- the setters may only be changed from within
+
     public Vector3 LastSeenPosition { get; private set; } // ''
 
     // Private variables (_)
@@ -88,7 +90,7 @@ public class VisionSensor : MonoBehaviour
             if (debugMode)
             {
                 DebugLogs.msg(DebugLogs.DebugOption.FOVCheck);
-                Debug.Log($"Angle: {angle}, FOV/2: {fieldOfView * 0.5f}");
+                UnityEngine.Debug.Log($"Angle: {angle}, FOV/2: {fieldOfView * 0.5f}");
             }
             return false;
         }

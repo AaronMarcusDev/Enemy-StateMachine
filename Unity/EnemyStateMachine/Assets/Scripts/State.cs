@@ -1,4 +1,4 @@
-enum State
+public enum State
 {
     Patrol,
     Alert,

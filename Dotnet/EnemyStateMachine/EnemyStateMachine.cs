@@ -1,22 +1,19 @@
 class StateMachine
 {
 
-    [SerializeField] private VisionSensor vision;
-    [SerializeField] private float detectionFillRate = 0.5f;
-    [SerializeField] private float detectionDrainRate = 0.25f;
-    [SerializeField] private float alertThreshold = 0.5f;
-    [SerializeField] private float attackThreshold = 1f;
-
-    private float detection = 0f;
-    private State currentState = State.Patrol;
-
-    void Update()
+    static void Main(string[] args)
     {
-        if (vision.CanSeePlayer)
-            detection = Mathf.Clamp01(detection + detectionFillRate * Time.deltaTime);
-        else
-            detection = Mathf.Clamp01(detection - detectionDrainRate * Time.deltaTime);
+        State CurrentState = State.Alert;
 
-        // state-logica op basis van detection + vision
+        switch (CurrentState)
+        {
+            case State.Patrol: { Console.WriteLine("Patrol state enabled"); break; }
+            case State.Alert: { Console.WriteLine("Alert state enabled"); break; }
+            case State.Investigate: { Console.WriteLine("Investigate state enabled"); break; }
+            case State.Attack: { Console.WriteLine("Attack state enabled"); break; }
+        }
+
     }
+
+    
 }
