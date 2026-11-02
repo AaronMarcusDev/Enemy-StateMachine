@@ -1,16 +1,9 @@
 class StateMachine
 {
-    enum State
-    {
-        Patrol,
-        Alert,
-        Investigate,
-        Attack
-    }
 
     static void Main(string[] args)
     {
-        State CurrentState = State.Patrol;
+        State CurrentState = State.Alert;
 
         switch (CurrentState)
         {

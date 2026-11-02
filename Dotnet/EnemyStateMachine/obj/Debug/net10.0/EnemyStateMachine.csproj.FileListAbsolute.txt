@@ -1,0 +1,15 @@
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.AssemblyInfoInputs.cache
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.AssemblyInfo.cs
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.csproj.CoreCompileInputs.cache
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.sourcelink.json
+/Users/aaron/Alert System/EnemyStateMachine/bin/Debug/net10.0/EnemyStateMachine
+/Users/aaron/Alert System/EnemyStateMachine/bin/Debug/net10.0/EnemyStateMachine.deps.json
+/Users/aaron/Alert System/EnemyStateMachine/bin/Debug/net10.0/EnemyStateMachine.runtimeconfig.json
+/Users/aaron/Alert System/EnemyStateMachine/bin/Debug/net10.0/EnemyStateMachine.dll
+/Users/aaron/Alert System/EnemyStateMachine/bin/Debug/net10.0/EnemyStateMachine.pdb
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.dll
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/refint/EnemyStateMachine.dll
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.pdb
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/EnemyStateMachine.genruntimeconfig.cache
+/Users/aaron/Alert System/EnemyStateMachine/obj/Debug/net10.0/ref/EnemyStateMachine.dll

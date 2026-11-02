@@ -16,3 +16,7 @@ EnemyConfig
 
 ### Flowchart
 <img src="images/flowchart.png" width="500"></img>
+
+### Sources used
+- https://docs.unity.com/en-us/engine/6000.6/script-reference/unityengine/physics/overlapsphere
+- https://www.youtube.com/watch?v=sUMEnIUeVro
