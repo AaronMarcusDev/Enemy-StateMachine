@@ -1,2 +1,5 @@
 EnemyStateMachine/bin
 EnemyStateMachine/obj
+
+.DS_Store
+*/.DS_Store
