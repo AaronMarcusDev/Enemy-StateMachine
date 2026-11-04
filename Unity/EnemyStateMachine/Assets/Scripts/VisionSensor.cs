@@ -109,27 +109,47 @@ public class VisionSensor : MonoBehaviour
     {
         if (!drawGizmos) return;
 
+        // Yellow wire sphere showing the maximum view range radius
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, viewRange);
+        // https://docs.unity3d.com/520/Documentation/ScriptReference/Gizmos.DrawWireSphere.html?source=post_page-----6b10c683ef09--------------------------------
 
+        // Calculate half the field of view angle so it can build the cone edges the same on both sides
         float halfFov = fieldOfView * 0.5f;
+
+        // Boundaries of the vision cones
+        // by rotating the forward vector around Y by half of the FOV on both sides
         Vector3 leftDir = Quaternion.Euler(0, -halfFov, 0) * transform.forward;
         Vector3 rightDir = Quaternion.Euler(0, halfFov, 0) * transform.forward;
 
+        // Draw the two outer rays (edges of the vision cone)
         Gizmos.DrawRay(transform.position, leftDir * viewRange);
         Gizmos.DrawRay(transform.position, rightDir * viewRange);
 
+        // Number of segments to approximate the curve
         int steps = 20;
+
+        // Start the arc from the left edge of the cone
         Vector3 prev = transform.position + leftDir * viewRange;
+
+        // Iterate across the FOV and draw line segments to build the arc, literally made of lines, but it works well
         for (int i = 1; i <= steps; i++)
         {
+            // progress along the arc (0 = left edge, 1 = right edge)
             float t = i / (float)steps;
+
+            // Interpolate the direction from left to right across the field of view
             Vector3 dir = Quaternion.Euler(0, -halfFov + fieldOfView * t, 0) * transform.forward;
+
+            // Endpoint of the current arc segment at the outer view range
             Vector3 point = transform.position + dir * viewRange;
+
+            // Draw a segment from the previous point to the current point
             Gizmos.DrawLine(prev, point);
             prev = point;
         }
 
+        // If the player is currently visible, draw a green line to the last known position
         if (CanSeePlayer)
         {
             Gizmos.color = Color.green;
