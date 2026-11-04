@@ -72,7 +72,7 @@ public class EnemyStateMachine : MonoBehaviour
                     _investigatePosition = _vision.LastSeenPosition;
                     _investigateTimer = investigateWaitTime; // Reset timer
                     _mover.MoveTo(_investigatePosition);
-                    Debug.Log("<State> Investigate: Op weg naar laatste positie");
+                    Debug.Log("<State> Investigate");
                     break;
                 case State.Attack:
                     Debug.Log("<State> Attack");
